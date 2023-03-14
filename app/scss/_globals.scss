@@ -1,0 +1,136 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #fafafa;
+  padding: 0;
+  margin: 0;
+  font-size: $fs-14;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  line-height: 1.3;
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+
+a,
+a:visited,
+a:hover {
+  text-decoration: none;
+}
+
+//Spacing
+.wrap {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+//Overlay
+.overlay {
+  display: none;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #737373;
+  cursor: pointer;
+}
+
+//Flex
+.flex {
+  display: flex;
+
+  &-js-sb {
+    justify-content: space-between;
+  }
+
+  &-jc-c {
+    justify-content: center;
+  }
+
+  &-ai-c {
+    align-items: center;
+  }
+
+  &-fd-c {
+    flex-direction: column;
+  }
+
+  &-fd-r {
+    flex-direction: row;
+  }
+
+  &-gp-20 {
+    gap: 20px;
+  }
+
+  &-gp-18 {
+    gap: 20px;
+  }
+}
+
+//Grid
+.grid {
+  display: grid;
+
+  &-gp-18 {
+    grid-gap: 18px;
+  }
+}
+
+//Vissibility
+.grid-mobile {
+  grid-template-columns: repeat(1, 1fr);
+}
+
+// For tablet
+.grid-tablet {
+  @include breakpoint-up(tablet) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+//For desktop
+.grid-desktop {
+  @include breakpoint-up(desktop) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.hide-for-desktop {
+  @include breakpoint-up(large) {
+    display: none;
+  }
+}
+
+// For mobile
+.hide-for-mobile {
+  @include breakpoint-down(medium) {
+    display: none;
+  }
+}
+
+.for-mobile {
+  @include breakpoint-down(medium) {
+    // display: none;
+    // margin-left: 0;
+  }
+}

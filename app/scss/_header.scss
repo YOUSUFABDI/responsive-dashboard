@@ -1,0 +1,138 @@
+.header__section {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 6;
+  height: 64px;
+  margin-left: 260px;
+  background-color: $white;
+  color: $dark-black;
+  font-size: $fs-14;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 5px 5px -3px,
+    rgba(0, 0, 0, 0.043) 0px 8px 10px 1px, rgba(0, 0, 0, 0.035) 0px 3px 14px 2px;
+  padding: 8px 20px 8px 18px;
+  transition: margin-left 300ms ease-in-out;
+
+  @include breakpoint-down(medium) {
+    margin-left: 0;
+  }
+
+  &.toggle-head {
+    margin-left: 0;
+  }
+
+  nav {
+    padding-top: 9px;
+    padding-left: 9px;
+    padding-right: 9px;
+    height: fit-content;
+
+    .nav__left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      .humberg-menu {
+        @include breakpoint-up(desktop) {
+          pointer-events: none;
+        }
+      }
+
+      span {
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+
+        &:hover {
+          color: $dark-blue;
+          border-radius: 50%;
+        }
+      }
+    }
+
+    .nav__right {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+
+      .sear__icon {
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
+
+        &:hover {
+          color: $dark-blue;
+        }
+      }
+
+      div {
+        cursor: pointer;
+
+        transition: all 300ms ease-in-out;
+
+        &:hover {
+          color: $dark-blue;
+          border-radius: 50%;
+        }
+      }
+
+      .nav__indicator__one {
+        position: relative;
+
+        span {
+          &:not(:first-child) {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: $blue;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .nav__indicator__two {
+        position: relative;
+
+        span {
+          &:not(:first-child) {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: $blue;
+            color: $white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .nav__user {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        .user__icon {
+          background-color: #bdbdbd;
+          width: 40px;
+          height: 40px;
+          object-fit: contain;
+          object-position: center top;
+          border-radius: 50%;
+
+          svg {
+            fill: $white;
+          }
+        }
+      }
+    }
+  }
+}

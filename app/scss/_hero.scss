@@ -1,0 +1,113 @@
+.hero {
+  grid-template-columns: repeat(1, 1fr);
+  background-color: $light-white;
+  margin-left: 260px;
+  margin-block-start: 90px;
+  padding: 8px 20px 8px 18px;
+  height: fit-content;
+  transition: margin-left 300ms ease-in-out;
+
+  &.add {
+    margin-left: 0;
+  }
+
+  @include breakpoint-down(medium) {
+    margin-left: 0;
+  }
+
+  .hero__head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 9px;
+    padding-right: 9px;
+
+    span {
+      color: $dark-black;
+      font-size: $fs-18;
+      font-weight: 700;
+      padding: 4px 0;
+    }
+
+    select {
+      color: $dark-black;
+      font-size: $fs-18;
+      padding: 4px 9px;
+      border: 1px solid grey;
+      border-radius: 3px;
+      outline: none;
+      cursor: pointer;
+      transition: border 300ms ease-in-out;
+
+      &:hover {
+        border: 1px solid $dark-black;
+      }
+
+      &:focus {
+        border: 1px solid $blue;
+      }
+
+      option {
+        outline: none;
+      }
+    }
+  }
+
+  .hero__cards {
+    padding-left: 9px;
+    padding-right: 9px;
+
+    @include breakpoint-up(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-up(desktop) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .hero__card {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background-color: $white;
+      color: $dark-black;
+      font-size: $fs-14;
+      box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 3px -2px,
+        rgba(0, 0, 0, 0.04) 0px 3px 4px 0px, rgba(0, 0, 0, 0.04) 0px 1px 8px 0px !important;
+      border-radius: 6px;
+      padding: 18px 0;
+      padding-left: 22px;
+      z-index: 1;
+
+      span {
+        opacity: 0.5;
+      }
+
+      .hero__icon {
+        align-self: flex-start;
+        margin-top: 5px;
+        cursor: pointer;
+        transition: opacity 300ms ease-in-out;
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      .hero__card__child {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+
+        .hero__popularity {
+          font-size: $fs-32;
+          font-weight: bold;
+          opacity: 1;
+          position: relative;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}
