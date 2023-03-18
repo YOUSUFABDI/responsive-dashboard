@@ -34,8 +34,32 @@
       gap: 10px;
 
       .humberg-menu {
+        // background-color: rebeccapurple;
+        // @include breakpoint-up(desktop) {
+        //   // pointer-events: none;
+        // }
+
         @include breakpoint-up(desktop) {
-          pointer-events: none;
+          &.desktop {
+            // background-color: darkblue;
+            display: block;
+          }
+
+          &.mobile {
+            display: none;
+          }
+        }
+
+        @include breakpoint-down(medium) {
+          &.mobile {
+            // background-color: magenta;
+            display: block;
+            // margin-left: 399px;
+          }
+
+          &.desktop {
+            display: none;
+          }
         }
       }
 

@@ -21,6 +21,9 @@ body {
   &.no-scroll {
     overflow: hidden;
   }
+  @include breakpoint-up(desktop) {
+    background-color: $white;
+  }
 }
 
 h1,
@@ -52,6 +55,26 @@ a:hover {
   left: 0;
   background-color: #737373;
   cursor: pointer;
+
+  @include breakpoint-up(desktop) {
+    display: none;
+
+    .fr-d {
+      background-color: $white;
+    }
+  }
+
+  &.open-overlay {
+    display: block;
+
+    @include breakpoint-up(desktop) {
+      display: none;
+
+      .fr-d {
+        background-color: $white;
+      }
+    }
+  }
 }
 
 //Flex
@@ -132,5 +155,11 @@ a:hover {
   @include breakpoint-down(medium) {
     // display: none;
     // margin-left: 0;
+  }
+}
+
+.fr-d {
+  @include breakpoint-up(large) {
+    background-color: $white;
   }
 }

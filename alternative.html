@@ -20,7 +20,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   </head>
   <body>
-    <div class="overlay hide-for-desktop fr-d"></div>
+    <div class="overlay hide-for-desktop"></div>
     <!-- SIDEBAR STARTS HERE -->
     <aside class="sidebar__wrapper hide-sidebar flex flex-fd-c flex-gp-20 wrap">
       <div class="sidebar__head">
@@ -592,163 +592,103 @@
     </header>
     <!-- HEADER ENDS HERE -->
 
-    <!-- HERO SECTION STARTS HERE -->
-    <section class="hero flex flex-fd-c flex-gp-18">
-      <div class="hero__head">
-        <span id="over">OverView</span>
-        <select id="overView">
-          <option value="This-Month">This Month</option>
-          <option value="Last-Month">Last Month</option>
-          <option value="Six-Month">Six Month</option>
-          <option value="Last-Year">Last Year</option>
-        </select>
+    <section class="alternative__chart__section">
+      <canvas id="myChart4" style="width: 100%; max-width: 80%"></canvas>
+    </section>
+
+    <section class="alt__cards__section">
+      <div class="alt__cards">
+        <div class="alt__card">
+          <span
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium icon css-1jgtvd5"
+            aria-hidden="true"
+            >group</span
+          >
+
+          <div class="alt__card__info">
+            <span>New Leads</span>
+            <span>3050</span>
+          </div>
+
+          <span
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1jgtvd5 left"
+            aria-hidden="true"
+            >arrow_right_alt</span
+          >
+        </div>
+
+        <div class="alt__card">
+          <span
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium icon css-1jgtvd5"
+            aria-hidden="true"
+            >attach_money</span
+          >
+
+          <div class="alt__card__info">
+            <span>This week Sales </span>
+            <span>$80,500 </span>
+          </div>
+
+          <span
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1jgtvd5 left"
+            aria-hidden="true"
+            >arrow_right_alt</span
+          >
+        </div>
+
+        <div class="alt__card">
+          <span
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium icon css-1jgtvd5"
+            aria-hidden="true"
+            >store</span
+          >
+
+          <div class="alt__card__info">
+            <span>Inventory Status </span>
+            <span>8.5% Stock Surplus </span>
+          </div>
+
+          <span
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1jgtvd5 left"
+            aria-hidden="true"
+            >arrow_right_alt</span
+          >
+        </div>
+
+        <div class="alt__card">
+          <span
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium icon css-1jgtvd5"
+            aria-hidden="true"
+            >shopping_cart</span
+          >
+
+          <div class="alt__card__info">
+            <span>Orders to deliver </span>
+            <span>305 Orders </span>
+          </div>
+
+          <span
+            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1jgtvd5 left"
+            aria-hidden="true"
+            >arrow_right_alt</span
+          >
+        </div>
       </div>
 
-      <div class="hero__cards grid grid-gp-18">
-        <div class="hero__card">
-          <span
-            class="hero__icon material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1whn3"
-            aria-hidden="true"
-            >people</span
-          >
-          <div class="hero__card__child">
-            <span class="hero__popularity">10,495</span>
-            <span>New Members </span>
-          </div>
-        </div>
-
-        <div class="hero__card">
-          <span
-            class="hero__icon material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1whn3"
-            aria-hidden="true"
-            >add_location</span
-          >
-          <div class="hero__card__child">
-            <span class="hero__popularity">10,495</span>
-            <span>New Members </span>
-          </div>
-        </div>
-
-        <div class="hero__card">
-          <span
-            class="hero__icon material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1whn3"
-            aria-hidden="true"
-            >keyboard_voice</span
-          >
-          <div class="hero__card__child">
-            <span class="hero__popularity">45,269</span>
-            <span>Support Members</span>
-          </div>
-        </div>
-
-        <div class="hero__card">
-          <span
-            class="hero__icon material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1whn3"
-            aria-hidden="true"
-            >card_giftcard</span
-          >
-          <div class="hero__card__child">
-            <span class="hero__popularity">20,965</span>
-            <span>Tags Used</span>
-          </div>
-        </div>
+      <div class="alt__chart">
+        <canvas id="myChart2" style="width: 100%; max-width: 100%"></canvas>
       </div>
     </section>
-    <!-- HERO SECTION ENDS HERE -->
-
-    <!-- CHART STARTS HERE-->
-    <section class="crt">
-      <div class="crt__head">
-        <span>STATISTICS </span>
-        <button>
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <div class="chart">
-        <canvas id="myChart" style="width: 100%; max-width: 100%"></canvas>
-      </div>
-    </section>
-    <!-- CHART ENDS HERE-->
-
-    <!-- OVERVIEW SECTION STARTS HERE -->
-    <section class="overview__section">
-      <div class="overview__boxs">
-        <div class="overview__box">
-          <span
-            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1whn3"
-            aria-hidden="true"
-            >colorize</span
-          >
-          <span>48</span>
-          <span>New Posts</span>
-        </div>
-
-        <div class="overview__box">
-          <span
-            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1whn3"
-            aria-hidden="true"
-            >attachment</span
-          >
-          <span>291</span>
-          <span>Attachment Files</span>
-        </div>
-
-        <div class="overview__box">
-          <span
-            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1whn3"
-            aria-hidden="true"
-            >mode_comment</span
-          >
-          <span>291</span>
-          <span>Comments</span>
-        </div>
-
-        <div class="overview__box">
-          <span
-            class="material-icons notranslate MuiIcon-root MuiIcon-fontSizeMedium css-1whn3"
-            aria-hidden="true"
-            >remove_red_eye</span
-          >
-          <span>110</span>
-          <span>Total Views</span>
-        </div>
-      </div>
-      <div class="overview__statistics">
-        <div class="overview__statistics__head">
-          <span>STATISTICS </span>
-          <button>
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
-        </div>
-
-        <div class="overview__statistics__chart">
-          <canvas id="myChart2" style="width: 100%; max-width: 600px"></canvas>
-        </div>
-      </div>
-      <div class="overview__flower__graphs">
-        <div class="overview__flower__graph__one">
-          <canvas id="myChart3" style="width: 100%; max-width: 100%"></canvas>
-        </div>
-        <div class="overview__flower__graph__two">
-          <canvas id="myChart4" style="width: 100%; max-width: 100%"></canvas>
-        </div>
-      </div>
-    </section>
-    <!-- OVERVIEW SECTION ENDS HERE -->
 
     <!-- FOOTER STARTS HERE -->
-    <footer class="footer__section">
+    <!-- <footer class="footer__section">
       <button>Get Matx Pro</button>
       <button>Design and Developed by UI Lib</button>
-    </footer>
+    </footer> -->
     <!-- FOOTER ENDS HERE -->
 
     <!-- js link -->
-    <script src="./app/js/Header.js"></script>
+    <script defer src="./app/js/Header.js"></script>
     <script src="./app/js/DropDown.js"></script>
     <script src="./app/js/Charts.js"></script>
   </body>
