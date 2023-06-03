@@ -1,141 +1,139 @@
-.overview__section {
-  display: grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-gap: 20px;
-  height: fit-content;
-  padding: 0px 20px 0px 18px;
-  margin-block-start: 40px;
-  width: 100%;
+.overview {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  right: 0;
+  transition: all 300ms ease-in-out;
 
-  .overview__statistics {
+  @include breakpoint-up(medium) {
+    margin-left: 0;
+
+    &.rm-margin {
+      margin-left: 0;
+    }
+  }
+
+  @include breakpoint-up(large) {
+    &.addMr {
+      margin-left: 260px;
+    }
+  }
+
+  &__head {
     display: flex;
-    flex-direction: column;
-    gap: 60px;
-    background-color: rgb(255, 255, 255);
-    color: rgb(52, 49, 76);
-    transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-    border-radius: 8px;
-    box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 3px -2px,
-      rgba(0, 0, 0, 0.04) 0px 3px 4px 0px, rgba(0, 0, 0, 0.04) 0px 1px 8px 0px !important;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    color: $dark-black;
 
-    .overview__statistics__head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 20px 30px;
-      background-color: #fcfcfc;
-      color: $dark-black;
-      opacity: 0.5;
-      font-size: $fs-14;
+    span {
+      font-weight: bold;
+      font-size: $fs-18;
+      align-self: flex-end;
+    }
 
-      button {
-        background-color: transparent;
-        display: flex;
-        align-items: center;
-        gap: 3px;
+    .select-dropdown {
+      margin: 0;
+      padding: 0;
+      position: relative;
+      box-sizing: border-box;
+      background-color: $white;
+      border: 1px solid $gray;
+      border-radius: 4px;
+      transition: all 300ms ease-in-out;
+
+      &:hover {
+        border: 1px solid $dark-blue;
+      }
+
+      select {
+        font-size: 1rem;
+        font-weight: normal;
+        max-width: 100%;
+        padding: 8px 24px 8px 10px;
         border: none;
+        background-color: transparent;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        border-radius: 4px;
         cursor: pointer;
 
-        span {
-          background-color: $dark-black;
-          width: 8px;
-          height: 8px;
-          border-radius: 6px;
+        &:active,
+        &:focus {
+          outline: none;
+          box-shadow: none;
+          border: 1px solid $blue;
         }
       }
-    }
 
-    .overview__statistics__chart {
-      width: 100%;
-    }
-  }
-
-  //For Desktop
-  @include breakpoint-up(desktop) {
-    // background-color: rebeccapurple;
-    grid-template-columns: repeat(3, 1fr);
-    width: fit-content;
-    margin-left: 260px;
-    transition: margin-left 300ms ease-in-out;
-
-    .overview__flower__graphs {
-      //   background-color: tomato;
-      margin-right: 8px;
-    }
-
-    .overview__boxs {
-      margin-left: 10px;
-      //   background-color: green;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 8px;
+        width: 0;
+        height: 0;
+        margin-top: -2px;
+        border-top: 5px solid #aaa;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+      }
     }
   }
 
-  &.r-o-m-l {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .overview__boxs {
+  &__cards {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    grid-gap: 10px;
-    width: 100%;
+    grid-gap: 15px;
+    margin-top: 30px;
 
-    .overview__box {
+    @include breakpoint-up(medium) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpoint-up(large) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+
+    .overview-card {
       display: flex;
-      flex-direction: column;
-      gap: 8px;
       align-items: center;
-      justify-content: center;
-      padding: 20px;
-      width: 100%;
-      background-color: $white;
+      gap: 19px;
+      padding: 30px 10px;
+      border-radius: 6px;
       box-shadow: rgba(0, 0, 0, 0.06) 0px 3px 3px -2px,
         rgba(0, 0, 0, 0.04) 0px 3px 4px 0px, rgba(0, 0, 0, 0.04) 0px 1px 8px 0px !important;
-      transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 
-      span {
-        color: $dark-black;
-        opacity: 0.5;
-        transition: opacity 300ms ease-in-out;
+      img {
+        width: 40px;
+        border-radius: 50%;
+        padding: 8px 8px;
+        cursor: pointer;
+        transition: all 300ms ease-in-out;
 
-        &:nth-child(1) {
-          cursor: pointer;
-
-          &:hover {
-            opacity: 1;
-          }
-        }
-
-        &:not(:first-child) {
-          opacity: 0.5;
-          font-size: $fs-14;
-        }
-
-        &:nth-child(2) {
-          opacity: 1;
-          font-size: $fs-32;
-          font-weight: bold;
+        &:hover {
+          background-color: $too-light-white;
         }
       }
-    }
-    //For Desktop
-    @include breakpoint-up(desktop) {
-      //   background-color: orange;
-      grid-template-columns: repeat(2, 1fr);
-      .overview__box {
-        width: 180px;
 
-        span {
-          &:not(:first-child) {
-            opacity: 0.5;
-            font-size: $fs-18;
-          }
+      .card-text {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+        position: relative;
 
-          &:nth-child(2) {
-            opacity: 1;
-            font-size: $fs-32;
-            font-weight: bold;
-          }
+        h3 {
+          position: absolute;
+          top: 0;
+          color: $dark-blue;
+          font-size: $fs-18;
+          font-weight: bold;
+        }
+
+        h4 {
+          opacity: 0.5;
+          margin-top: 30px;
         }
       }
     }

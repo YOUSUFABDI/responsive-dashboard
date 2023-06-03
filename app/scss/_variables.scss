@@ -5,8 +5,16 @@ $light-white: hsl(0, 0%, 98%);
 $dark-black: hsl(247, 22%, 25%);
 $blue: hsl(210, 79%, 46%);
 $orange: hsl(36, 100%, 69%);
+$gray: hsl(0, 0%, 74%);
+$overlay: rgba(0, 0, 0, 0.54);
+$too-light-white: rgba(0, 0, 0, 0.06);
+$light-black: #464c62;
+$btnHover: rgba(255, 255, 255, 0.16);
 
 //Fonts
 $fs-14: 0.875rem; //14px
 $fs-18: 1.125rem; //18px
+$fs-20: 1.25rem;
 $fs-32: 2rem; //32px
+
+// #586669

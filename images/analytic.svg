@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="800px" height="800px" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" viewBox="0 0 800 800" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   
+    .fil0 {fill:#378B4E}
+    .fil1 {fill:white}
+   
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"></metadata>
+  <path class="fil0" d="M400 0c289,0 400,111 400,400 0,289 -111,400 -400,400 -289,0 -400,-111 -400,-400 0,-289 111,-400 400,-400z" id="id_101" style="fill: rgb(255, 255, 255);"></path>
+  <path class="fil1" d="M620 556l-440 0c-7,0 -12,-6 -12,-12l0 -281c-5,3 -8,7 -12,7 -12,0 -16,-16 -7,-22l24 -18c5,-4 12,-3 16,2l23 16c12,9 -1,28 -14,20l-6 -4 0 41 28 0c16,0 16,24 0,24l-28 0 0 51 28 0c16,0 16,25 0,25l-28 0 0 51 28 0c16,0 16,24 0,24l-28 0 0 52 428 0 -4 -6c-3,-5 -2,-13 3,-16 5,-4 13,-3 16,2l17 23c5,6 5,12 0,17l-17 23c-8,12 -29,-1 -19,-14l4 -5zm-367 -36l0 -99c0,-4 1,-6 3,-9l70 -69c5,-5 13,-4 17,1l55 59 81 -176c4,-9 17,-9 21,-1l70 129c0,2 1,4 1,6l0 159 -318 0z" id="id_102" style="fill: rgb(88, 102, 105);"></path>
+ </g>
+</svg>

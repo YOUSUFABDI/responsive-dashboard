@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/images/logo.svg" />
+
+    <!-- Fonts Cdn -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Css Link -->
+    <link rel="stylesheet" href="./dist/style.css" />
+
+    <!-- Js Link -->
+    <script src="./app/js/script.js" defer></script>
+  </head>
+  <body>
+    <div class="overlay" data-overlay></div>
+    <header class="header px-16" data-header>
+      <nav class="header__nav" data-navbar>
+        <div class="header__left">
+          <button class="menu" data-menu>
+            <img class="" src="./images/menu.svg" alt="menu" />
+          </button>
+          <div class="header__uniqicons">
+            <button>
+              <img src="./images/envelope.svg" alt="envelope" />
+            </button>
+            <button>
+              <img src="./images/rectangle.svg" alt="rectangle" />
+            </button>
+            <button>
+              <img src="./images/star.svg" alt="star" />
+            </button>
+          </div>
+        </div>
+        <div class="header__right">
+          <div class="header__notuniq">
+            <button class="search" data-search-btn>
+              <img src="./images/search.svg" alt="search" />
+            </button>
+            <button class="bell">
+              <img src="./images/bell.svg" alt="bell" />
+              <span class="bell__bell-indicator">3</span>
+            </button>
+            <button class="cart">
+              <img src="./images/cart.svg" alt="cart" />
+              <span class="cart__cart-indicator">3</span>
+            </button>
+          </div>
+          <div class="header__profile">
+            <span class="pername">HiJason@ui-lib.com</span>
+            <span class="icowrapper">
+              <img
+                class="person-pic"
+                src="./images/profile.svg"
+                alt="profile"
+              />
+            </span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Search Input -->
+      <form class="header__input hide" data-input-wrapper>
+        <input type="search" placeholder="Search here..." />
+        <button>
+          <img src="./images/close-sm.svg" alt="close-sm" data-close-btn />
+        </button>
+      </form>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar" data-sidebar>
+      <!-- Head -->
+      <div class="sidebar__head px-16">
+        <img src="./images/logo.svg" alt="logo" />
+        <span>Matx</span>
+      </div>
+
+      <!-- Links -->
+      <div class="sidebar__links px-16">
+        <!-- Dashboard Links -->
+        <div class="sidebar__dash-links">
+          <a class="dash-link dash-active px-8" href="./dashboard.html">
+            <img src="./images/dash-ico.svg" alt="dash-ico" />
+            <span>Dashboard</span>
+          </a>
+          <a class="dash-link px-8" href="#">
+            <img src="./images/analytic.svg" alt="analytic" />
+            <span>Analytics</span>
+          </a>
+          <a class="dash-link px-8" href="#">
+            <img src="./images/analytic.svg" alt="analytic" />
+            <span>Alternative</span>
+          </a>
+          <a class="dash-link px-8" href="#">
+            <img src="./images/inventory.svg" alt="inventory" />
+            <span>Inventory Management</span>
+          </a>
+        </div>
+
+        <!-- Page Links -->
+        <div class="sidebar__page-links">
+          <span class="px-8 page-ln-title">Pages</span>
+          <div class="sidebar__page-links">
+            <div class="dropdown__wrapper" data-dropdown-wrapper>
+              <button class="page-link-btn px-8" data-page-link-btn>
+                <img src="./images/customers.svg" alt="customers" />
+                <span>Customer</span>
+                <img
+                  class="right-icon"
+                  data-dropdown-icon
+                  src="./images/right-ico.svg"
+                  alt="right-ico"
+                />
+              </button>
+              <div class="dropdown__item">
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Customer List</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>View Customer</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>New Customer</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="dropdown__wrapper" data-dropdown-wrapper>
+              <button class="page-link-btn px-8" data-page-link-btn>
+                <img src="./images/white-cart.svg" alt="white-cart" />
+                <span>Product</span>
+                <img
+                  class="right-icon"
+                  data-dropdown-icon
+                  src="./images/right-ico.svg"
+                  alt="right-ico"
+                />
+              </button>
+              <div class="dropdown__item">
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Product List</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>View Product</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>New Product</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="dropdown__wrapper" data-dropdown-wrapper>
+              <button class="page-link-btn px-8" data-page-link-btn>
+                <img src="./images/folder.svg" alt="folder" />
+                <span>Orders</span>
+                <img
+                  class="right-icon"
+                  data-dropdown-icon
+                  src="./images/right-ico.svg"
+                  alt="right-ico"
+                />
+              </button>
+              <div class="dropdown__item">
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Order List</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>View Order</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>New Order</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="dropdown__wrapper" data-dropdown-wrapper>
+              <button class="page-link-btn px-8" data-page-link-btn>
+                <img src="./images/help.svg" alt="help" />
+                <span>Help Center</span>
+                <img
+                  class="right-icon"
+                  data-dropdown-icon
+                  src="./images/right-ico.svg"
+                  alt="right-ico"
+                />
+              </button>
+              <div class="dropdown__item">
+                <a class="dropdown-itm px-16" href="#">
+                  <span>FAQ 1</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>FAQ 2</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="dropdown__wrapper" data-dropdown-wrapper>
+              <button class="page-link-btn px-8" data-page-link-btn>
+                <img src="./images/analytic.svg" alt="analytic" />
+                <span>Pricing</span>
+                <img
+                  class="right-icon"
+                  data-dropdown-icon
+                  src="./images/right-ico.svg"
+                  alt="right-ico"
+                />
+              </button>
+              <div class="dropdown__item">
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Pricing 1</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Pricing 2</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Pricing 3</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Pricing 4</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="dropdown__wrapper" data-dropdown-wrapper>
+              <button class="page-link-btn px-8" data-page-link-btn>
+                <img src="./images/profile.svg" alt="profile" />
+                <span>User List</span>
+                <img
+                  class="right-icon"
+                  data-dropdown-icon
+                  src="./images/right-ico.svg"
+                  alt="right-ico"
+                />
+              </button>
+              <div class="dropdown__item">
+                <a class="dropdown-itm px-16" href="#">
+                  <span>User List 1</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>User List 2</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>User List 3</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>User List 4</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="dropdown__wrapper" data-dropdown-wrapper>
+              <button class="page-link-btn px-8" data-page-link-btn>
+                <img src="./images/folder.svg" alt="folder" />
+                <span>Forms</span>
+                <img
+                  class="right-icon"
+                  data-dropdown-icon
+                  src="./images/right-ico.svg"
+                  alt="right-ico"
+                />
+              </button>
+              <div class="dropdown__item">
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Order Form</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Invoice Form</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Property Listing Form</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Basic</span>
+                </a>
+              </div>
+            </div>
+
+            <div class="dropdown__wrapper" data-dropdown-wrapper>
+              <button class="page-link-btn px-8" data-page-link-btn>
+                <img src="./images/analytic.svg" alt="analytic" />
+                <span>Session/Auth</span>
+                <img
+                  class="right-icon"
+                  data-dropdown-icon
+                  src="./images/right-ico.svg"
+                  alt="right-ico"
+                />
+              </button>
+              <div class="dropdown__item">
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Sign in</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Sign up</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>ForgetPassword</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Error</span>
+                </a>
+              </div>
+            </div>
+
+            <a class="dash-link px-8" href="#">
+              <img src="./images/analytic.svg" alt="analytic" />
+              <span>Left Sidebar Card</span>
+            </a>
+
+            <a class="dash-link px-8" href="#">
+              <img src="./images/profile.svg" alt="profile" />
+              <span>User Profile</span>
+            </a>
+
+            <a class="dash-link px-8" href="#">
+              <img src="./images/acc.svg" alt="acc" />
+              <span>Account</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- App Links -->
+        <div class="sidebar__page-links">
+          <span class="px-8 page-ln-title">App</span>
+          <div class="sidebar__page-links">
+            <div class="dropdown__wrapper" data-dropdown-wrapper>
+              <button class="page-link-btn px-8" data-page-link-btn>
+                <img src="./images/white-cart.svg" alt="cart" />
+                <span>Ecomerce</span>
+                <img
+                  class="right-icon"
+                  data-dropdown-icon
+                  src="./images/right-ico.svg"
+                  alt="right-ico"
+                />
+              </button>
+              <div class="dropdown__item">
+                <a class="dropdown-itm active px-16" href="#">
+                  <span>Customer List</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>View Customer</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>New Customer</span>
+                </a>
+              </div>
+            </div>
+
+            <a class="dash-link px-8" href="#">
+              <img src="./images/analytic.svg" alt="analytic" />
+              <span>Scrum Board</span>
+            </a>
+
+            <a class="dash-link px-8" href="#">
+              <img src="./images/analytic.svg" alt="analytic" />
+              <span>Invoice Builder</span>
+            </a>
+
+            <a class="dash-link px-8" href="#">
+              <img src="./images/calender.svg" alt="calender" />
+              <span>Calender</span>
+            </a>
+
+            <a class="dash-link px-8" href="#">
+              <img src="./images/chat.svg" alt="chat" />
+              <span>Chat</span>
+            </a>
+
+            <a class="dash-link px-8" href="#">
+              <img src="./images/inbox.svg" alt="inbox" />
+              <span>Inbox</span>
+            </a>
+
+            <a class="dash-link px-8" href="#">
+              <img src="./images/calender.svg" alt="calender" />
+              <span>Todo</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Component Links -->
+        <div class="sidebar__page-links">
+          <span class="px-8 page-ln-title">COMPONENTS</span>
+          <div class="sidebar__page-links">
+            <div class="dropdown__wrapper" data-dropdown-wrapper>
+              <button class="page-link-btn px-8" data-page-link-btn>
+                <img src="./images/love.svg" alt="love" />
+                <span>Components</span>
+                <img
+                  class="right-icon"
+                  data-dropdown-icon
+                  src="./images/right-ico.svg"
+                  alt="right-ico"
+                />
+              </button>
+              <div class="dropdown__item">
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Auto Complete</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Buttons</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Checkbox</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Icons</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Forms</span>
+                </a>
+              </div>
+            </div>
+
+            <a class="dash-link px-8" href="#">
+              <img src="./images/map.svg" alt="map" />
+              <span>Maps</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Charts -->
+        <div class="sidebar__page-links">
+          <span class="px-8 page-ln-title">CHARTS</span>
+          <div class="sidebar__page-links">
+            <div class="dropdown__wrapper" data-dropdown-wrapper>
+              <button class="page-link-btn px-8" data-page-link-btn>
+                <img src="./images/chart.svg" alt="chart" />
+                <span>Charts</span>
+                <img
+                  class="right-icon"
+                  data-dropdown-icon
+                  src="./images/right-ico.svg"
+                  alt="right-ico"
+                />
+              </button>
+              <div class="dropdown__item">
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Echarts</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Recharts</span>
+                </a>
+                <a class="dropdown-itm px-16" href="#">
+                  <span>Apex Charts</span>
+                </a>
+              </div>
+            </div>
+
+            <a class="dash-link px-8" href="#">
+              <img src="./images/analytic.svg" alt="analytic" />
+              <span>Documentation</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Overview -->
+    <section class="overview px-16" data-overview>
+      <div class="overview__head">
+        <span>Overview</span>
+        <div class="select-dropdown">
+          <select>
+            <option value="This Month">This Month</option>
+            <option value="Last Month">Last Month</option>
+            <option value="Six Month">Six Month</option>
+            <option value="Last Year">Last Year</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="overview__cards">
+        <div class="overview-card">
+          <img src="./images/gray-cust.svg" alt="customers" />
+          <div class="card-text">
+            <h3>10,495</h3>
+            <h4>New Members</h4>
+          </div>
+        </div>
+        <div class="overview-card">
+          <img src="./images/gray-map.svg" alt="gray-map" />
+          <div class="card-text">
+            <h3>30,495</h3>
+            <h4>Places added</h4>
+          </div>
+        </div>
+        <div class="overview-card">
+          <img src="./images/gray-cust.svg" alt="customers" />
+          <div class="card-text">
+            <h3>10,495</h3>
+            <h4>Support Members</h4>
+          </div>
+        </div>
+        <div class="overview-card">
+          <img src="./images/gray-cust.svg" alt="customers" />
+          <div class="card-text">
+            <h3>10,495</h3>
+            <h4>Tags Used</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

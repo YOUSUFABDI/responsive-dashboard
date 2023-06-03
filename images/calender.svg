@@ -1,0 +1,13 @@
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g id="_x39_89_x2C__calender_x2C__day_x2C__date_x2C__year">
+	<g>
+		<path d="M385,110V95c0-11.028-8.972-20-20-20c-11.028,0-20,8.972-20,20v15v35h40V110z" id="id_104" style="fill: rgb(255, 255, 255);"></path>
+		<path d="M165,110V95c0-11.028-8.972-20-20-20s-20,8.972-20,20v15v35h40V110z" id="id_105" style="fill: rgb(255, 255, 255);"></path>
+		<path d="M415,115h-20v35c0,2.761-2.238,5-5,5h-50c-2.762,0-5-2.239-5-5v-35H175v35c0,2.761-2.239,5-5,5h-50c-2.761,0-5-2.239-5-5
+			v-35H95c-22.056,0-40,17.944-40,40v30h305c2.762,0,5,2.239,5,5s-2.238,5-5,5H55v210c0,22.056,17.944,40,40,40h320
+			c22.056,0,40-17.944,40-40V155C455,132.944,437.056,115,415,115z" id="id_106" style="fill: rgb(255, 255, 255);"></path>
+	</g>
+</g>
+<g id="Layer_1">
+</g>
+</svg>
