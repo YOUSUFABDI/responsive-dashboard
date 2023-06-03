@@ -18,9 +18,12 @@
     <!-- Css Link -->
     <link rel="stylesheet" href="./dist/style.css" />
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+
     <!-- Js Link -->
     <script src="./app/js/script.js" defer></script>
   </head>
+
   <body>
     <div class="overlay" data-overlay></div>
     <header class="header px-16" data-header>
@@ -508,6 +511,57 @@
           <div class="card-text">
             <h3>10,495</h3>
             <h4>Tags Used</h4>
+          </div>
+        </div>
+      </div>
+
+      <!-- Statistics Chart -->
+      <div class="overview__static-chart px-16">
+        <canvas id="myChart" style="width: 100%; max-width: 100%"></canvas>
+      </div>
+
+      <!-- Overview Sec Cards -->
+      <div class="overview__cards-static-chart">
+        <div class="overview__sec-cards">
+          <div class="card-item">
+            <img src="./images/gray-map.svg" alt="map" />
+            <h3>48</h3>
+            <span>New Posts</span>
+          </div>
+          <div class="card-item">
+            <img src="./images/gray-map.svg" alt="map" />
+            <h3>291</h3>
+            <span>Attached Files</span>
+          </div>
+          <div class="card-item">
+            <img src="./images/gray-map.svg" alt="map" />
+            <h3>291</h3>
+            <span>Comments</span>
+          </div>
+          <div class="card-item">
+            <img src="./images/gray-map.svg" alt="map" />
+            <h3>110</h3>
+            <span>Total Views </span>
+          </div>
+        </div>
+
+        <div class="overview__sec-static">
+          <canvas id="myChartTwo" style="width: 100%; max-width: 100%"></canvas>
+        </div>
+
+        <div class="overview__sec-chart">
+          <div class="char-one">
+            <canvas
+              id="myChartThree"
+              style="width: 100%; max-width: 100%"
+            ></canvas>
+          </div>
+
+          <div class="chart-two">
+            <canvas
+              id="myChartFour"
+              style="width: 100%; max-width: 100%"
+            ></canvas>
           </div>
         </div>
       </div>
